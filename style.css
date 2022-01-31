@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,300;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: antiquewhite;
+}
+/* -------------------------------------------------------------- */
+/* ------------------------Navigation Bar------------------------ */
+
+nav ul{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    list-style-type: none;
+    background-color: black;
+    color: white;
+    /* font-family: lato; */
+    /* margin-top: 2px; */
+    /* font-family: 'Lato', sans-serif; */
+}
+
+nav ul li{
+    padding: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    /* letter-spacing: 1px; */
+    
+}
+
+.logo img{
+    height: 50px;
+    padding-right: 4px;
+}
+.logo{
+    /* align-items: center; */
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------Song-Container------------------------ */
+
+#container{
+    height: 70%;
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 14px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+}
+
+#songContainer h1{
+    color: white;
+    margin-bottom: 50px;
+    font-family: Lato;
+    font-weight: 400;
+}
+
+.songList{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-family: helvetica;
+    /* font-weight: 100; */
+    background-color: white;
+    width: 50%;
+    border-radius: 34px;
+    margin-bottom: 12px;
+}
+
+.songList img{
+    height: 35px;
+    border-radius: 15px;
+    /* border: solid 1px black; */
+    /* margin-right: 5px; */
+    margin: 2px 0;
+    margin-left: 30px;
+
+}
+
+.timeDuration{
+    margin-right: 30px;
+}
+
+.songItemPlay{
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------- */
+/* ----------------------------Bottom---------------------------- */
+
+#bottom{
+    position: sticky;
+    height: 120px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+#myProgressBar{
+    width: 70vw;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.icons i{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#songInfo{
+    position: absolute;
+    left: 15vw;
+}
+
+#songInfo img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    padding-right: 10px;
+}
+
+
+
+@media screen and (max-width: 780px) {
+
+    .songList{
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .timeDuration{
+        margin-right: 15px;
+    }
+
+    .songList img{
+        margin-left: 15px;
+        height: 28px;
+    }
+
+    #songContainer h1{
+        color: white;
+        margin-bottom: 30px;
+        font-family: Lato;
+        font-weight: 400;
+    }
+
+    #myProgressBar{
+        /* width: 70vw; */
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+    #songInfo{
+        left: 37vw;
+        margin-bottom: 23px;
+    }
+    
+    .icons i{
+        margin-top: 30px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) and (min-width: 780px){
+    
+    .songList{
+        width: 60%;
+        font-size: 15px;
+    }
+}
